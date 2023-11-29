@@ -1,0 +1,163 @@
+/* App.css */
+.App {
+  height: 100vh;
+  background: #1a1a1a;
+  /* background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); */
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  padding: 20px;
+
+  flex-direction: column; /* Add this line */
+  justify-content: flex-start;
+}
+
+.chat-window {
+  width: 100%;
+  max-width: 600px;
+  background: #333; /* Changed to a darker solid color */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.chat-header {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+}
+
+.chat-body {
+  height: 300px;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+}
+
+.message {
+  max-width: 75%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.user .message {
+  background-color: #0084ff;
+  align-self: flex-end;
+}
+
+.bot .message {
+  background-color: #34b7f1;
+  align-self: flex-start;
+}
+
+.chat-footer {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  /*background: rgba(255, 255, 255, 0.5); */
+  color: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #008ba3;
+}
+
+/* Scrollbar Styles */
+.chat-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  background-color: #00bcd4;
+  border-radius: 10px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ddd;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ddd;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ddd;
+}
+
+.error-message {
+  color: red;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Styles for the upload form */
+form {
+  z-index: 10; /* Lower z-index but still above other content */
+  position: relative; /* Keep it relative */
+  background-color: white; /* Keep the background white for visibility */
+  width: 100%; /* Set a width to ensure it spans the container */
+  max-width: 600px; /* Match the chat window width */
+  margin: 0 auto 20px; /* Center the form and add margin at the bottom */
+  padding: 20px; /* Add some padding around the form fields */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: add shadow for consistency */
+  border-radius: 15px; /* Optional: round the corners like the chat window */
+}
+
+/* Ensure the upload status is visible */
+.upload-status {
+  color: green; /* You can choose the color based on your theme */
+  margin-bottom: 10px;
+}
+
+/* New container style */
+.AppContainer {
+  text-align: center; /* Center everything */
+  width: 100%; /* Take full width */
+}
+
+/* Upload form specific styles */
+.upload-form {
+  position: absolute; /* Position it absolutely */
+  top: 0; /* At the top */
+  left: 0; /* At the left */
+  z-index: 1000; /* Make sure it's above other content */
+}
